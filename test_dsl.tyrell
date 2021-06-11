@@ -1,0 +1,19 @@
+# First, specify the types that will be used
+enum RawNode{
+    "1","2"
+}
+
+value Graph;
+value Node;
+value Empty;
+
+# Next, specify the input/output of the synthesized program
+program G(Graph) -> Graph;
+
+# Finally, specify the production rules
+func empty: Empty -> Empty;
+func get_node: Node -> RawNode;
+func remove_node: Graph n -> Graph a, Node v;
+func add_node: Graph n -> Graph a;
+func remove_edge: Graph n -> Graph a, Node v, Node u;
+func add_edge: Graph n -> Graph a, Node u, Node v;

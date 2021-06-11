@@ -1,0 +1,9 @@
+value Graph;
+value Empty;
+
+#synthesized program
+program G(Graph) -> Graph;
+
+#production rules
+func empty: Empty -> Empty;
+func add_edge: Graph n -> Graph a, Node v, Node u;

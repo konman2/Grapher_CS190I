@@ -1,0 +1,17 @@
+value Graph;
+value Empty;
+value Output;
+
+#synthesized program
+program G(Graph) -> Output;
+
+#production rules
+func empty: Empty -> Empty;
+func num_conn_comp: Graph g -> Output o;
+func num_node_disjoint_paths: Output o -> Graph g, Node s, Node t;
+func num_edge_disjoint_paths: Output o -> Graph g, Node s, Node t;
+func maximum_matching: Output o -> Graph g ;
+func minimum_edge_cut: Output o -> Graph g;
+func max_core: Output o -> Graph g;
+func shortest_path: Output o -> Graph g, Node s, Node t;
+func min_cut: Output o -> Graph g, Node s, Node t;
